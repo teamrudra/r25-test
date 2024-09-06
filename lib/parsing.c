@@ -3,8 +3,21 @@
 #include <math.h>
 // implement interpolation here
 int interpolation(uint16_t channel) {
+	int inmin= 1024;
+	int outmin= MIN_pwm;
+	int inmax= 2048;
+	int outmax= MAX_pwm;
+	
+	void setup() {
+		motorSerial.begin(9600);
+		Serial1.begin(100000);
+		sbus.begin();
+		object
 	// write interpolation code here
 }
+void loop() {
+if (sbus.read()) {
+   int inSig= sbus.getchannel(0)
 // creating 11 bit channel
 uint16_t *parse_buffer(uint8_t buff[]) { 
 		
